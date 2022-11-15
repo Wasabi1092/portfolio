@@ -12,17 +12,85 @@
                 <p>About the ePortfolio</p>
             </div>
             <div class="banner-btn">
-                <a href="#"><span></span>4 C's</a>
+                <a href="#c"><span></span>4 C's</a>
                 <a href="#"><span></span>Creativity</a>
                 <a href="#"><span></span>Collaboration</a>
                 <a href="#"><span></span>Communication</a>
                 <a href="#"><span></span>Critical Thinking</a>
             </div>
         </section>
+        <div id="sideNav">
+            <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <p id="trigger1">+ 4Cs</p>
+                    <ul id="subpage1">
+                        <li><a href="creativity.html">Creativity</a></li>
+                        <li><a href="collaboration.html">Collaboration</a></li>
+                        <li><a href="communication.html">Communication</a></li>
+                        <li><a href="criticalthinking.html">Critical Thinking</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="oneproject.html">ONE Project</a></li>
+                <li><a href="randomkindness.html">Random Acts of Kindness</a></li>
+                <li><a href="cas.html">CAS</a></li>
+                <li><a href="plp.html">PLP</a></li>
+                <li><a href="reflections.html">Reflections</a></li>
+            </ul>
+            </nav>	
+        </div>
+        <div id="menuBtn">
+            <img src="img/menu.png" id="menu">	
+        </div>
         <section id="content">
-            <div class="title-text">
+            <div class="title-text" id="c">
                 <h1>The 4 C's</h1>
+                <p>
+                    The 4C's are the set of skills that are beneficial to have in a workplace setting.<br>
+                    They are Creativity, Collaboration, Communication, and Critical Thinking.<br>
+                    The 4C's cover the following: <br><br>
+                    <ul>
+                        <li>Creativity covers creative aspects, such as the arts, and typically involves some sort of creation</li>
+                        <li>Collaboration covers one's ability to work with others, and looks at teamwork. </li>
+                        <li>Communication focuses on the ability to communicate information, perhaps through a foreign language, or just presenting information in a format different to the original source</li>
+                        <li>Critical Thinking focuses on problem solving and applying knowledge in different contexts. This might involve things such as applying mathematical concepts in different areas, or knowledge of the arts in extracurricular activities</li>
+                    </ul>
+                    <br>
+                    These can be represented on a continuum to determine how well each of the 4Cs have been applied, linked <a href="https://docs.google.com/document/d/1QghjwfPfSplE7xzBd8EWABKWyRRh-mBNLHiY6830Tv8/edit" target="_blank">here</a>
+                </p>
             </div>
         </section>
     </body>
+    <script>
+        subpage1 = document.getElementById("subpage1")
+        trigger1 = document.getElementById("trigger1")
+        sideNav = document.getElementById("sideNav")
+        menuBtn = document.getElementById("menuBtn")
+        sideNav.style.right = "-250px";
+        trigger1.onclick = function(){
+            if (trigger1.innerText == "+ 4Cs"){
+                trigger1.innerText = "- 4Cs"
+                subpage1.style.display = "block"
+                subpage1.style.transform = "translateY(0px)"
+            }
+            else{
+                trigger1.innerText = "+ 4Cs"
+                subpage1.style.display = "none"
+                subpage1.style.transform = "translateY(-300px)"
+
+            }
+        }
+        menuBtn.onclick = function(){
+            if(sideNav.style.right == "-250px"){
+                sideNav.style.right = "0";
+                menu.src = "img/close.png";
+            }
+            else{
+                sideNav.style.right = "-250px";
+                menu.src = "img/menu.png";
+            }
+        }
+    </script>
 </html>
