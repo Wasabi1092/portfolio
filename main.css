@@ -109,6 +109,7 @@ nav ul li a{
 	text-decoration: none;
 	color: #fff;	
 }
+
 #menuBtn{
 	width: 50px;
 	height: 50px;
@@ -125,11 +126,54 @@ nav ul li a{
 #menu{
     transform: translateY(10px)
 }
-#subpage1{
-    display: none;
-    transform: translateY(-300px);
+#trigger2{
+	display: inline;
+}
+#trigger1{
+	display: inline;
+}
+#trigger3{
+	display: inline;
+}
+#trigger2 img {
+	width: 20px;
+	transform: rotate(180deg);
+	vertical-align: middle;
+	display: inline-block;
+}
+#trigger3 img {
+	width: 20px;
+	transform: rotate(180deg);
+	vertical-align: middle;
+	display: inline-block;
+}
+#trigger1 img {
+	width: 20px;
+	transform: rotate(180deg);
+	vertical-align: middle;
+	display: inline-block;
+}
+#trigger2 p{
+	display: inline-block;
+}
+#trigger3 p{
+	display: inline-block;
+}
+#trigger1 p{
+	display: inline-block;
+}
+#subpage1, #subpage2, #subpage3{
+	height: 0;
+	opacity: 0;
     transition-duration: 300ms;
 }
-#trigger1.parent{
-    height: 30px;
+#subpage1{
+	transform: translateY(-700px)
 }
+#subpage2{
+	transform: translateY(-450px)
+}
+#subpage3{
+	transform: translateY(-950px)
+}
+
