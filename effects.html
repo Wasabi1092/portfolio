@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Effects of the Epidemic</title>
+        <link rel="stylesheet" href="main.css">
+        <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <section id = "banner">
+            <div class = "banner-text">
+                <h1>Effects of the Epidemic</h1>
+                <p>How was I affected by COVID?</p>
+            </div>
+            <div class="banner-btn">
+                <a href="#"><span></span>Overview</a>
+                <a href="#"><span></span>School</a>
+                <a href="#"><span></span>Activities</a>
+            </div>
+        </section>
+        <div id="sideNav">
+            <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <div id="trigger2">
+                        <p>About Me</p>
+                        <img src="img/up.png" alt="up" id="aboutarrow">
+                    </div>
+                    
+                    <ul id="subpage2">
+                        <li><a href="aboutme.html">About me</a></li>
+                        <li><a href="reflections.html">Reflections</a></li>
+                        <li><a href="effects.html">Effects of the Epidemic</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div id="trigger1">
+                        <p>4Cs</p>
+                        <img src="img/up.png" alt="up" id="carrow">
+                    </div>
+                    <ul id="subpage1">
+                        <li><a href="creativity.html">Creativity</a></li>
+                        <li><a href="collaboration.html">Collaboration</a></li>
+                        <li><a href="communication.html">Communication</a></li>
+                        <li><a href="criticalthinking.html">Critical Thinking</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div id="trigger3">
+                        <p>Other</p>
+                        <img src="img/up.png" alt="up" id="otherarrow">
+                    </div>
+                    <ul id="subpage3">
+                        <li><a href="oneproject.html">ONE Project</a></li>
+                        <li><a href="randomkindness.html">Random Acts of Kindness</a></li>
+                        <li><a href="cas.html">CAS</a></li>
+                        <li><a href="plp.html">PLP</a></li>
+                        <li><a href="extracurriculars.html">Extracurriculars</a></li>
+                    </ul>
+                </li>
+            </ul>
+            </nav>	
+        </div>
+        <div id="menuBtn">
+            <img src="img/menu.png" id="menu">	
+        </div>
+        <section id="content">
+            <div class="title-text" id="effects">
+                <h1>COVID-19</h1>
+                
+            </div>
+        </section>
+    </body>
+    <script>
+        subpage3 = document.getElementById("subpage3")
+        subpage2 = document.getElementById("subpage2")
+        subpage1 = document.getElementById("subpage1")
+        trigger1 = document.getElementById("trigger1")
+        trigger2 = document.getElementById("trigger2")
+        trigger3 = document.getElementById("trigger3")
+        sideNav = document.getElementById("sideNav")
+        menuBtn = document.getElementById("menuBtn")
+        sideNav.style.right = "-250px";
+        trigger1.onclick = function(){
+            if (subpage1.style.height == "0px"){
+                document.getElementById("carrow").style.transform = "rotate(0deg)"
+                subpage1.style.height = "auto"
+                subpage1.style.transform = "translateY(0px)"
+                subpage1.style.opacity = 1
+            }
+            else{
+                document.getElementById("carrow").style.transform = "rotate(180deg)"
+                subpage1.style.height = 0
+                subpage1.style.transform = "translateY(-700px)"
+                subpage1.style.opacity = 0
+
+            }
+        }
+        trigger2.onclick = function(){
+            if (subpage2.style.height == "0px"){
+                document.getElementById("aboutarrow").style.transform = "rotate(0deg)"
+                subpage2.style.height = "auto"
+                subpage2.style.transform = "translateY(0px)"
+                subpage2.style.opacity = 1
+            }
+            else{
+                document.getElementById("aboutarrow").style.transform = "rotate(180deg)"
+                subpage2.style.height = 0
+                subpage2.style.transform = "translateY(-450px)"
+                subpage2.style.opacity = 0
+
+            }
+        }
+        trigger3.onclick = function(){
+            if (subpage3.style.height == "0px"){
+                document.getElementById("otherarrow").style.transform = "rotate(0deg)"
+                subpage3.style.height = "auto"
+                subpage3.style.transform = "translateY(0px)"
+                subpage3.style.opacity = 1
+            }
+            else{
+                document.getElementById("otherarrow").style.transform = "rotate(180deg)"
+                subpage3.style.height = 0
+                subpage3.style.transform = "translateY(-960px)"
+                subpage3.style.opacity = 0
+
+            }
+        }
+        menuBtn.onclick = function(){
+            if(sideNav.style.right == "-250px"){
+                sideNav.style.right = "0";
+                menu.src = "img/close.png";
+            }
+            else{
+                sideNav.style.right = "-250px";
+                menu.src = "img/menu.png";
+            }
+        }
+    </script>
+</html>

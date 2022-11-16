@@ -19,6 +19,13 @@ body{
 	height: 70vh;
     align-items: center;
 }
+#banner2{
+    background: linear-gradient(#061320, rgba(0,0,0,0.5)),url("./img/4cbg.png");
+	background-size: cover;
+	background-position: center;
+	height: 70vh;
+    align-items: center;
+}
 .banner-text{
     text-align: center;
     font-weight: bold;
